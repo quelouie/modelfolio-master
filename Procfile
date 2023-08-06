@@ -1,1 +1,1 @@
-web: gunicorn modelfolio.wsgi --log-file -
+web: gunicorn modelfolio.wsgi 
