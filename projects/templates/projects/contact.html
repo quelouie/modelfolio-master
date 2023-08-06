@@ -1,15 +1,15 @@
-{% load static %}
+{% load staticfiles %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @font-face {
             font-family: "Keystone"; /* You can choose any name for the font-family */
-            src: url("/static/fonts/Keystone.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
+            src: url("/staticfiles/fonts/Keystone.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
         }
         @font-face {
             font-family: "Gexo"; /* You can choose any name for the font-family */
-            src: url("/static/fonts/Gexo\ Sans\ Regular.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
+            src: url("/staticfiles/fonts/Gexo\ Sans\ Regular.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
         }
             body {
                 background: radial-gradient(circle, rgb(37, 7, 0), rgb(0, 0, 0), rgb(89, 50, 131));
@@ -208,20 +208,20 @@
         <h1 class="gexo_links"> Contact Me At: </h1>
         <table class="contact_table">
             <tr>
-                <td><img src="{% static 'images/linkedin.png' %}" alt="Image Description"></td>
+                <td><img src="{% staticfiles 'images/linkedin.png' %}" alt="Image Description"></td>
                 <td><a class="gexo" href="https://www.linkedin.com/in/adrian-neah-lozada-68166912a">
                 Adrian Neah Lozada {{about.linkedin}}
                 </a></td>
             </tr>
             <tr>
-                <td><img src="{% static 'images/instagram.png' %}" alt="Image Description"></td>
+                <td><img src="{% staticfiles 'images/instagram.png' %}" alt="Image Description"></td>
                 <td><a class="gexo" href="https://www.instagram.com/adrianneahofficial/">
                 adrianneahofficial {{about.instagram}}
                 </a></td>
             </a></td>
             </tr>
             <tr>
-                <td><img src="{% static 'images/email.png' %}" alt="Image Description"></td>
+                <td><img src="{% staticfiles 'images/email.png' %}" alt="Image Description"></td>
                 <td><a class="gexo" href="mailto:adrianneah98@outlook.com">adrianneah98@outlook.com {{about.email}}
             </tr>
             
