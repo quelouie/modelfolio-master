@@ -1,0 +1,151 @@
+
+<style>
+                @font-face {
+        font-family: "Keystone"; /* You can choose any name for the font-family */
+        src: url("/static/fonts/Keystone.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
+    }
+    @font-face {
+        font-family: "Gexo"; /* You can choose any name for the font-family */
+        src: url("/static/fonts/Gexo\ Sans\ Regular.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
+    }
+            body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: black; /* Change the background to black */
+            color: white;
+            overflow: hidden; /* Hide the scrollbar */
+        }
+    /* Custom styles for the image */
+    .image-container {
+        position: relative;
+        overflow: hidden;
+        animation: imageAppear 1s ease-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Make the image cover the container */
+    .image-container img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fade-gradient {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 400px; /* Adjust the height of the gradient fade */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+    }
+
+    /* Define the animation */
+    @keyframes imageAppear {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Styles for the text on top of the image */
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 120%);
+        text-align: center;
+        z-index: 1; /* Ensure the text is on top of the image */
+        width: 100%;
+    }
+
+    .keystone {
+        font-family: "Keystone";
+        letter-spacing: 0.1em;
+        font-size: 3rem; /* Adjust the font size as needed */
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow to the keystone text */
+        margin: 0;
+    }
+
+    .gexo-sans-font {
+        font-family: "Gexo";
+        font-size: 1rem; /* Adjust the font size as needed */
+        color: white;
+        margin: 0;
+        transform: translate(0%, 120%);
+    }
+
+    /* Styles for the row and columns */
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px; /* Adjust the gap between columns as needed */
+        margin-top: 100px; /* Adjust the margin as needed to shift the text down */
+        position: fixed;
+        bottom: 5vh; /* Adjust the position as needed to make it static */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .column {
+        font-family: "Gexo";
+        font-size: 1rem; /* Adjust the font size as needed */
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow to the keystone text */
+    }
+
+    /* Remove the outline from links */
+    .column a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* Remove the table border */
+    hr {
+        border: none;
+    }
+
+    .gexo {
+        font-family: "Gexo";
+        font-size: 1.2rem; /* Adjust the font size as needed */
+        color: white;
+        margin: 0;
+        transform: translate(0%, 120%);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow to the keystone text */
+    }
+
+
+
+</style>
+
+<title> ADRIAN NEAH LOZADA </title>
+
+<div class="image-container">
+    <img src="static/images/IMG_0836.JPG" alt="Image Description">
+    <div class="fade-gradient"></div>
+</div>
+
+<div class="text-container">
+    <h1 class="keystone"> ADRIAN NEAH LOZADA </h1>
+    <div class="gexo"> PART-TIME FREELANCE MODEL </div>
+    <hr>
+    <hr>
+</div>
+<div class="row">
+    <div class="column"> <a href="/about"> ABOUT </a></div>
+    <div class="column"> <a href="/projects"> ALBUM </a></div>
+    <div class="column"> <a href="/contact"> CONTACT </a></div>
+</div>
+
+

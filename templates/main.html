@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            @font-face {
+        font-family: "Keystone"; /* You can choose any name for the font-family */
+        src: url("/static/fonts/Keystone.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
+    }
+    @font-face {
+        font-family: "Gexo"; /* You can choose any name for the font-family */
+        src: url("/static/fonts/Gexo\ Sans\ Regular.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
+    }
+        body {
+            background: radial-gradient(circle, rgb(37, 7, 0), rgb(0, 0, 0), rgb(89, 50, 131));
+            background-size: 600% 600%;
+            animation: gradientShift 20s ease infinite;
+            color: white;
+            margin: 0;
+            overflow:auto;
+        }
+        .cont{
+    position:relative;
+    overflow:hidden;
+    height:200px;
+    width:100%;
+    border:1px solid red;
+    }
+    .s{
+    overflow-y:scroll;
+    height:200px;
+    width:100%;
+    position:absolute;
+    right:-30px;
+    }
+
+        .container {
+            align-items: center;
+            justify-content: space-between;
+            transform: translate(1%, 10%);
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 100px; /* Adjust the gap between columns as needed */
+            margin-top: 5vh; /* Adjust the margin as needed to shift the text down */
+            border: none;
+            z-index: 1; /* Add a higher z-index to make sure the navbar stays on top */
+        }
+
+        .column {
+            text-align: center;
+            border: none;
+	        float: left;
+            width: 15%;
+        }
+
+        /* Remove the outline from links */
+        .column a {
+            font-family: "Gexo";
+            font-size: 1.3rem; /* Adjust the font size as needed */
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Center the projects list */
+        .projects-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative; /* Add this to enable stacking context */
+        }
+
+        .logo {
+            margin: 10px;
+        }
+
+        .project-overlay {
+            /* Styles for the fixed-position overlay */
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            backdrop-filter: blur(5px); /* Apply backdrop filter to blur the background */
+            z-index: 2; /* Ensure the overlay is above other elements */
+            pointer-events: none; /* Allow clicking through the overlay to access underlying elements */
+        }
+        .project-overlay img {
+            /* Styles for the image within the overlay */
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%; /* Adjust the size of the image as needed */
+            max-height: 80vh; /* Adjust the size of the image as needed */
+            border-radius: 15px;
+            pointer-events: auto; /* Allow clicking on the image */
+        }
+
+        /* Style each project item */
+        .project-item {
+            margin: 10px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-item img {
+            width: 220px; /* Adjust the image size as needed */
+            height: 350px; /* Adjust the image size as needed */
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .project-item:hover {
+            transform: scale(1.5);
+        }
+
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 25%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        .keystone {
+            font-family: "Keystone";
+            letter-spacing: 0.1em;
+            font-size: 1.5rem; /* Adjust the font size as needed */
+            color: white;
+            margin: 0;
+            text-decoration: none;
+            color: white;
+        }
+
+        .gexo-sans-font {
+            font-family: "Gexo";
+            font-size: 0.8rem; /* Adjust the font size as needed */
+            color: white;
+            margin: 0;
+            transform: translate(0%, 20%);
+        }
+
+        hr {
+            border: none;
+        }
+
+        .gallery {
+            padding-top: 10px; /* Add padding to the top of the gallery to avoid overlap with the navbar */
+        }
+        .gexo {
+        font-family: "Gexo";
+        font-size: 1.2rem; /* Adjust the font size as needed */
+        color: white;
+        margin: 0;
+        transform: translate(0%, 120%);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow to the keystone text */
+    }
+    a {
+            font-family: "Keystone";
+            text-decoration: none;
+            color: white; /* Replace 'your_desired_color' with the color you want for the links */
+        }
+    </style>
+    <title>ADRIAN NEAH LOZADA</title>
+</head>
+<body>
+    <div class="container">
+        <div class='logo'>
+            <h1 class="keystone"><a href="/">ADRIAN NEAH LOZADA</a> </h1>
+            <h5 class="gexo-sans-font"> PART-TIME FREELANCE MODEL </h5>
+        </div>
+        <div class="row">
+            <div class="column"> <a href="/about"> ABOUT </a></div>
+            <div class="column"> <a href="/projects"> ALBUM </a></div>
+            <div class="column"> <a href="/contact"> CONTACT </a></div>
+        </div>
+    </div>
+    <hr>
+    {% include 'navbar.html' %}
+
+    {% block content %}
+
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,243 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: "Keystone"; /* You can choose any name for the font-family */
+            src: url("/static/fonts/Keystone.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
+        }
+        @font-face {
+            font-family: "Gexo"; /* You can choose any name for the font-family */
+            src: url("/static/fonts/Gexo\ Sans\ Regular.ttf"); /* Replace "your-font-file.ttf" with the actual filename of the font */
+        }
+            body {
+                background: radial-gradient(circle, rgb(37, 7, 0), rgb(0, 0, 0), rgb(89, 50, 131));
+                background-size: 600% 600%;
+                animation: gradientShift 20s ease infinite;
+                color: white;
+                margin: 0;
+                overflow:auto;
+            }
+            .cont{
+                position:relative;
+                overflow:hidden;
+                height:200px;
+                width:100%;
+                border:1px solid red;
+            }
+            .s{
+                overflow-y:scroll;
+                height:200px;
+                width:100%;
+                position:absolute;
+                right:-30px;
+            }
+
+            .container {
+                align-items: center;
+                justify-content: space-between;
+                transform: translate(1%, 10%);
+            }
+
+            .row {
+                display: flex;
+                justify-content: center;
+                gap: 100px; /* Adjust the gap between columns as needed */
+                margin-top: 5vh; /* Adjust the margin as needed to shift the text down */
+                border: none;
+                z-index: 1; /* Add a higher z-index to make sure the navbar stays on top */
+            }
+
+            .column {
+                text-align: center;
+                border: none;
+            }
+
+            /* Remove the outline from links */
+            .column a {
+                font-family: "Gexo";
+                font-size: 1.3rem; /* Adjust the font size as needed */
+                text-decoration: none;
+                color: white;
+            }
+
+            .logo {
+                margin: 0px;
+            }
+
+            @keyframes gradientShift {
+                0% {
+                    background-position: 0 50%;
+                }
+                50% {
+                    background-position: 100% 25%;
+                }
+                100% {
+                    background-position: 0 50%;
+                }
+            }
+
+            .keystone {
+                font-family: "Keystone";
+                letter-spacing: 0.1em;
+                font-size: 4.0rem; /* Adjust the font size as needed */
+                color: white;
+                margin: 0;
+                text-decoration: none;
+                color: white;
+                text-align: center;
+            }
+
+            .gexo-sans-font {
+                font-family: "Gexo";
+                font-size: 1rem; /* Adjust the font size as needed */
+                color: white;
+                margin: 0;
+                transform: translate(0%, 20%);
+                text-align: center;
+            }
+
+        hr {
+            border: none;
+        }
+
+        .gexo {
+            font-family: "Gexo";
+            font-size: 1.2rem; /* Adjust the font size as needed */
+            color: white;
+            margin: 0;
+            transform: translate(0%, 120%);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow to the keystone text */
+        }
+
+        .gexo_links {
+            font-family: "Gexo";
+            font-size: 2.0rem; /* Adjust the font size as needed */
+            color: white;
+            margin: 0;
+            margin-left: 50;
+            margin-bottom: 20;
+            transform: translate(0%, 120%);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow to the keystone text */
+        }
+
+        a {
+                font-family: "Keystone";
+                text-decoration: none;
+                color: white; /* Replace 'your_desired_color' with the color you want for the links */
+            }
+
+        input[type=text], input[type=email], textarea, label { font-family: "Gexo", sans-serif; font-weight: 100;}
+
+        input[type=text], input[type=email], textarea {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            }
+        
+        input[type=submit] {
+            width: 15%;
+            background-color: #f0f0f0;
+            color: #4a1c5f;
+            padding: 10px 20px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "Keystone", sans-serif;
+            position: absolute;
+            left: 30%;
+            }
+
+        input[type=submit]:hover {
+            background-color: #e0e0e0;
+            }
+
+        .box { 
+            position: absolute; 
+            top: 50%;
+            left: 70%; 
+            width: 50vw; 
+            height: 40vh; 
+            max-width: 700px; 
+            max-height: 200px; 
+            transform: translate(-50%, -50%); 
+            margin: auto;
+            }
+        
+        input[type=text], input[type=email], textarea { background-color: #f0f0f0; border: 1px solid #e0e0e0; color: black; }
+
+        img {
+            max-width: 60px;
+            height: auto;
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+
+        .contact_table{
+            max-width: 30%;
+            margin-top: 50;
+            margin-left: 50;
+        }
+        
+        td {
+            max-width: 10%;
+        }
+
+        
+    </style>
+    <title>ADRIAN NEAH LOZADA || Contact</title>
+</head>
+<div class="container">
+    <div class='logo'>
+        <h1 class="keystone"><a href="/">ADRIAN NEAH LOZADA</a> </h1>
+        <h5 class="gexo-sans-font"> PART-TIME FREELANCE MODEL </h5>
+    </div>
+    <div class="row">
+        <div class="column"> <a href="/about"> ABOUT </a></div>
+        <div class="column"> <a href="/projects"> ALBUM </a></div>
+    </div>
+</div>
+<hr>
+
+
+<div class="row">
+    <div class="contact_column">
+        <h1 class="gexo_links"> Contact Me At: </h1>
+        <table class="contact_table">
+            <tr>
+                <td><img src="{% static 'images/linkedin.png' %}" alt="Image Description"></td>
+                <td><a class="gexo" href="https://www.linkedin.com/in/adrian-neah-lozada-68166912a">
+                Adrian Neah Lozada {{about.linkedin}}
+                </a></td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/instagram.png' %}" alt="Image Description"></td>
+                <td><a class="gexo" href="https://www.instagram.com/adrianneahofficial/">
+                adrianneahofficial {{about.instagram}}
+                </a></td>
+            </a></td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/email.png' %}" alt="Image Description"></td>
+                <td><a class="gexo" href="mailto:adrianneah98@outlook.com">adrianneah98@outlook.com {{about.email}}
+            </tr>
+            
+        </table>
+    </div>
+    <div class="contact_column">
+        <h4 class="gexo_links" style="font-size: 20px; margin-bottom: 7%; margin-top: 20px;"> Please contact me using the form below. It would be great to hear from you! </h4> 
+        <form action="" method="post" >
+            {% csrf_token %}
+            <table style="margin-left: 18%;">
+            {{ form.as_table }}
+            </table>
+            <input type="submit" value="Submit" style="margin-left: 25%;">
+        </form>
+    </div>
+</div>
+
+
+

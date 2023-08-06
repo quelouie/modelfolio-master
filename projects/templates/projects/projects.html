@@ -1,0 +1,13 @@
+
+{% extends "main.html" %}
+{% block content %}
+    <ul>
+        {% for project in projects %}
+        <div class="column">
+            <div class="project-item">
+                <img class = "project__thumbnail" src="{{project.picture.url}}" alt="project thumbnail" height="30%" width="30%"/>
+            </div>
+        </div>
+        {% endfor %}
+    </ul>
+    {% endblock content %}
